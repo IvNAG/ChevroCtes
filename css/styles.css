@@ -1,0 +1,512 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+/*--------------------------------------------------------HEADER-NAV--------------------------------------------------------------*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F4F4F2;
+    grid-area: header;
+}
+
+.header nav ul{
+    display: flex;  
+    list-style: none;
+}
+
+.header nav ul li{
+    margin-left: 2rem;
+}
+
+.header nav ul li a{
+    text-align: center;
+    line-height: 20px;
+    letter-spacing:3px;
+    word-spacing: 1px;
+}
+
+.header nav .menu li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.header nav .submenu li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.header .menu li a:hover{
+    color: #806a3b;
+    transition: 0.2s;
+}
+
+.header .submenu{
+    top: 3.4rem;
+    position: absolute;
+    background: #BBBFCA;
+    visibility: hidden;
+    width: auto;
+    opacity: 0.6;
+    transition: opacity 1.5s;
+    margin-top: 10px;
+}
+
+.header .submenu li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+.header .submenu li {
+    list-style: none;
+}
+
+.header .menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.redes-container img{
+    width: 80px;
+    height: 70px;
+    margin-right: 20px;
+}
+/*--------------------------------------------------------MAIN-INDEX--------------------------------------------------------------*/
+.padre{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.50fr 1fr 0.50fr 0.30fr 0.60fr ; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header header"
+    "video video video video"
+    "lanzamientos lanzamientos lanzamientos lanzamientos"
+    "mas-vendidos mas-vendidos mas-vendidos mas-vendidos"
+    "footer footer footer footer"; 
+}
+
+.video{
+    display: flex;
+    justify-content: space-evenly;
+    background: #ddddda;
+    margin: 10px 10px 0px 5px;
+    grid-area: video;
+}
+
+.video iframe{
+    height: 400px;
+    width: 50%;
+    box-shadow: 0px 0px 15px black;
+}
+
+.video div{
+    width: 50%;
+    align-self: flex-start;
+    padding:20px;
+}
+
+.video div h2{
+    text-align: center;
+    font-size: 40px;
+    color: #b6862d;
+}
+
+.video div p{
+    font-size: 23px;
+}
+
+.lanzamientos-title{
+    text-align: center;
+}
+
+.lanzamientos {
+    display: flex;
+    text-align: center;   
+    background:#f8f8f5;
+    justify-content:space-around;
+    grid-area: lanzamientos;  
+}
+
+.lanzamientos div img{
+    width:300px;
+    height:150px;
+    margin:10px 0;
+}
+
+.lanzamientos div p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.mas-vendidos{
+    display: flex;
+    justify-content: space-around;
+    background:#cfcfce ;
+    margin:10px 10px 10px 10px;
+    align-items: center;
+    height: 80px;
+    grid-area: mas-vendidos;
+}
+
+.mas-vendidos h3{
+    font-size: 30px;
+}
+
+.mas-vendidos ol{
+    display: flex;
+}
+
+.mas-vendidos ol li{
+    font-size: 20px;
+    list-style:square inside;
+    margin-left: 30px;
+}
+/*--------------------------------------------------------MAIN-VEHICULOS----------------------------------------------------------*/
+.padre2{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.25fr 0.50fr 0.25fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header"
+    "vehiculos vehiculos vehiculos"
+    "footer footer footer"; 
+}
+
+.vehiculos{
+    grid-area: vehiculos ;
+}
+
+section h1{
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    font-size: 33px;
+    color: #333;
+    margin-left: 5%;
+}
+
+section img{
+    width:260px ;
+    height: 108px;
+}
+
+section .autos-title{
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 0px;
+    grid-area:autos-title;
+    flex-wrap:wrap
+}
+
+
+section .suvs{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 0px;
+    grid-area:suvs;
+}
+
+section .pickups{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    padding: 10px 0px 0px;
+    margin-bottom: 6px;
+    grid-area:pickups;
+}
+
+section .p-autos{
+    text-align: center;
+    font-size: 20px;
+}
+
+/*--------------------------------------------------------MAIN-OFERTAS------------------------------------------------------------*/
+.padre4{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+}
+
+.oferta{
+    width:600px;
+    margin:10px 35% 50px;
+    padding:20px 40px 50px 50px;
+    font-size:italic;
+    background-color:rgb(139, 146, 139);
+    color:rgb(255, 255, 255);
+    background: #625e5e;
+}
+
+.oferta h2{
+    text-align: center;
+}
+
+.oferta img{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        width:400px ;
+        height:200px ;
+}
+
+.oferta button{
+    margin-left: 30%;
+    margin-top: 20px;
+    padding: 1em 2em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;    
+}
+
+.oferta button:hover {
+    background-color: #CE7D35;
+    box-shadow: 0px 15px 20px rgba(177, 132, 8, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.otros{
+    background: #f5f0f0;
+    display: flex;
+    justify-content: space-around   ;
+}
+
+.otros p{
+    text-align: center;
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-decoration: none;
+    list-style: none;
+}
+
+.otros p a{
+    text-decoration: none;
+    list-style: none;
+    color: rgba(0, 0, 0, 0.815);
+}
+/*--------------------------------------------------------MAIN-PLAN-CHEVROLET-----------------------------------------------------*/
+.padre3{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+}
+
+.title-plan{
+    margin-left: 10px;
+    text-align: center;
+}
+
+.plan{
+    margin: 20px 10px 5px 40px;
+    grid-area: plan;
+}
+
+.plan a{
+    position: absolute;
+    left: 64%;
+    margin-top: 5px;
+    color: rgba(255, 253, 250, 0.817);
+    text-decoration: none;
+    padding: 5px 5px;
+    background-color: rgba(237, 162, 40, 0.817);
+    border-radius: 30px;
+}
+
+.plan a:hover{
+    letter-spacing: 2px;
+}
+
+.plan a:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1);
+}
+
+.plan img{
+    width: 1300px;
+    height: 524px;
+}
+
+.title-pasos{
+    text-align: center;
+    margin-top: 1%;
+    font-family:sans-serif;
+}
+
+.pasos {
+    display: flex;
+    width: 44%;
+    text-align: center;
+    margin-left: 25%;
+    margin-bottom: 30px;
+    border: 10px solid #b6862d;
+    box-sizing: content-box;
+    padding-bottom: 10px;
+    padding-top: 5px;	
+    grid-area: pasos;
+}
+
+.pasos img{
+    width:180px;
+    height:126px;
+}
+/*--------------------------------------------------------MAIN-CONTACTO-----------------------------------------------------------*/
+.padre5{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+}
+
+.title-contacto{
+    text-align:center;
+    font-size:30px;
+    margin-left: 43%;
+    padding-bottom: 6%;
+    width: 18%;
+}
+.formulario{
+    text-align: center;
+    margin: 30px 35% 20px 40%;
+    background-color: #e39754;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.formulario label{
+	margin: 0px 0px 15px 0px;
+}
+
+.formulario textarea{
+    margin-top: 20px;
+}
+/*--------------------------------------------------------FOOTER------------------------------------------------------------------*/
+.footer {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    padding: 1px;
+    background: #BBBFCA;
+    grid-area:footer; 
+}
+
+.footer img {
+    width: 300px;
+    height: 150px;
+}
+
+.footer ul li a{
+    color: black;
+    font-size: 24px;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.footer ul li a:hover {
+    color: #CE7D35;
+}
+
+
+.footer iframe{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 250px;
+} 
+
+/*--------------------------------------------------------MEDIA-QUERIE-TABLET--------------------------------------------------------------*/
+@media screen and (max-width:900px){
+/* -------------------------------------------------------HEADER-900----------------------------------------------------------------------*/
+    .header{
+    margin: 0%;
+    }
+    /* -------------------------------------------------------INDEX-900----------------------------------------------------------------------*/
+    .padre{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.50fr 0.60fr 1fr 1fr 0.10fr 0.50fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+                        "header header header"
+                        "video video video"
+                        "video video video"
+                        "lanzamientos lanzamientos lanzamientos"
+                        "mas-vendidos mas-vendidos mas-vendidos"
+                        "footer footer footer"; 
+    }             
+    
+    .video{
+        flex-direction: column;
+        align-items: center;
+    }
+    .video iframe{
+        width: 100%;
+    }
+
+    .lanzamientos{
+        flex-direction: column;
+    }
+    .lanzamientos h2{
+        font-size: 27px;
+    }
+
+    .lanzamientos div p{
+        font-size: 20px;
+    }
+    .mas-vendidos{
+        flex-direction: column;
+    }
+/* -------------------------------------------------------FOOTER-900----------------------------------------------------------------------*/
+    .footer{
+        margin: 0%;
+    }
+}
+/*--------------------------------------------------------MEDIA-QUERIE-MOBILE--------------------------------------------------------------*/
+@media screen and (max-width:550px){
+    /*--------------------------------------------------------HEADER-550--------------------------------------------------------------*/
+    .header{
+        flex-direction: column;
+    }
+
+    .header nav{
+        flex-direction: column;
+    }
+/*--------------------------------------------------------INDEX-550--------------------------------------------------------------*/
+    .video div h2{
+        font-size: 30px;
+    }
+
+    .video div p{
+        font-size: 20px;
+    }
+
+    .mas-vendidos h3{
+        font-size: 25px;
+    }
+
+    .mas-vendidos ol li{
+        font-size: 15px;
+    }
+/* -------------------------------------------------------FOOTER- 550----------------------------------------------------------------------*/
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer ul li{
+        font-size: 25px;
+    }
+}
