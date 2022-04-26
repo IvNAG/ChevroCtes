@@ -230,9 +230,14 @@ section .p-autos{
 
 /*--------------------------------------------------------MAIN-OFERTAS------------------------------------------------------------*/
 .padre4{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.3fr 0.5fr 0.3fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+                        "header header header"
+                        "oferta oferta oferta"
+                        "footer footer footer";
 }
 
 .oferta{
@@ -243,6 +248,7 @@ section .p-autos{
     background-color:rgb(139, 146, 139);
     color:rgb(255, 255, 255);
     background: #625e5e;
+    grid-area: oferta;
 }
 
 .oferta h2{
@@ -285,7 +291,7 @@ section .p-autos{
 .otros{
     background: #f5f0f0;
     display: flex;
-    justify-content: space-around   ;
+    justify-content: space-around;
 }
 
 .otros p{
@@ -304,14 +310,23 @@ section .p-autos{
 }
 /*--------------------------------------------------------MAIN-PLAN-CHEVROLET-----------------------------------------------------*/
 .padre3{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
-}
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.2fr 0.1fr 1fr 0,1fr 0.5fr 0.2fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header"
+    "title-plan title-plan title-plan"
+    "plan plan plan"
+    "title-pasos title-pasos title-pasos"
+    "pasos pasos pasos"
+    "footer footer footer"; 
+}   
 
 .title-plan{
     margin-left: 10px;
     text-align: center;
+    grid-area: title-plan;
 }
 
 .plan{
@@ -348,11 +363,12 @@ section .p-autos{
     text-align: center;
     margin-top: 1%;
     font-family:sans-serif;
+    grid-area: title-pasos;
 }
 
 .pasos {
     display: flex;
-    width: 44%;
+    width: auto;
     text-align: center;
     margin-left: 25%;
     margin-bottom: 30px;
@@ -369,9 +385,15 @@ section .p-autos{
 }
 /*--------------------------------------------------------MAIN-CONTACTO-----------------------------------------------------------*/
 .padre5{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto auto;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header"
+    "title-form title-form title-form"
+    "formulario formulario formulario"
+    "footer footer footer";  
 }
 
 .title-contacto{
@@ -380,12 +402,16 @@ section .p-autos{
     margin-left: 43%;
     padding-bottom: 6%;
     width: 18%;
+    grid-area: title-form;
 }
 .formulario{
     text-align: center;
     margin: 30px 35% 20px 40%;
     background-color: #e39754;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    grid-area: formulario;
+    width: 50%;
+    height: auto;
 }
 
 .formulario label{
@@ -433,6 +459,10 @@ section .p-autos{
 /* -------------------------------------------------------HEADER-900----------------------------------------------------------------------*/
     .header{
     margin: 0%;
+    flex-direction: column;
+    }
+    .header nav{
+        flex-direction: column;
     }
     /* -------------------------------------------------------INDEX-900----------------------------------------------------------------------*/
     .padre{
