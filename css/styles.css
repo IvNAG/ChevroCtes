@@ -80,15 +80,17 @@
 /*--------------------------------------------------------MAIN-INDEX--------------------------------------------------------------*/
 .padre{
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 0.50fr 1fr 0.50fr 0.30fr 0.60fr ; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr auto 0.5fr;
     gap: 0px 0px; 
     grid-template-areas: 
-    "header header header header"
-    "video video video video"
-    "lanzamientos lanzamientos lanzamientos lanzamientos"
-    "mas-vendidos mas-vendidos mas-vendidos mas-vendidos"
-    "footer footer footer footer"; 
+    "header header header"
+    "main main main"
+    "footer footer footer"; 
+}
+
+main{
+    grid-area: main;
 }
 
 .video{
@@ -126,11 +128,17 @@
 }
 
 .lanzamientos {
+    width: 100%;
+}
+
+.lanzamientos > div{
     display: flex;
-    text-align: center;   
-    background:#f8f8f5;
-    justify-content:space-around;
-    grid-area: lanzamientos;  
+    text-align: center;
+    background: #f8f8f5;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: lanzamientos;
 }
 
 .lanzamientos div img{
@@ -171,11 +179,11 @@
 .padre2{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.25fr 0.50fr 0.25fr; 
+    grid-template-rows: 0.5fr auto 0.5fr; 
     gap: 0px 0px; 
     grid-template-areas: 
     "header header header"
-    "vehiculos vehiculos vehiculos"
+    "main main main"
     "footer footer footer"; 
 }
 
@@ -236,13 +244,13 @@ section .p-autos{
     gap: 0px 0px; 
     grid-template-areas: 
                         "header header header"
-                        "oferta oferta oferta"
+                        "main main main"
                         "footer footer footer";
 }
 
 .oferta{
-    width:600px;
-    margin:10px 35% 50px;
+    width:40%;
+    margin:10px 35% 50px 30%;
     padding:20px 40px 50px 50px;
     font-size:italic;
     background-color:rgb(139, 146, 139);
@@ -289,21 +297,32 @@ section .p-autos{
 }
 
 .otros{
-    background: #f5f0f0;
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
 }
 
-.otros p{
+.otros div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     text-align: center;
-    font-family: sans-serif; 
+    flex-wrap: wrap;
+}
+
+.otros div div{
+    font-family:Georgia, 'Times New Roman', Times, serif; 
     font-size: 18px; 
-    font-weight: 400; 
     text-decoration: none;
     list-style: none;
 }
 
-.otros p a{
+.otros div div img{
+    margin:10px 0;
+}
+.otros div div p{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.otros div div p a{
     text-decoration: none;
     list-style: none;
     color: rgba(0, 0, 0, 0.815);
@@ -312,14 +331,11 @@ section .p-autos{
 .padre3{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.2fr 0.1fr 1fr 0,1fr 0.5fr 0.2fr; 
+    grid-template-rows: 0.5fr auto 0.5fr; 
     gap: 0px 0px; 
     grid-template-areas: 
     "header header header"
-    "title-plan title-plan title-plan"
-    "plan plan plan"
-    "title-pasos title-pasos title-pasos"
-    "pasos pasos pasos"
+    "main main main"
     "footer footer footer"; 
 }   
 
@@ -368,7 +384,7 @@ section .p-autos{
 
 .pasos {
     display: flex;
-    width: auto;
+    width: 45%;
     text-align: center;
     margin-left: 25%;
     margin-bottom: 30px;
@@ -387,30 +403,23 @@ section .p-autos{
 .padre5{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.1fr 0.1fr 1fr 0.1fr; 
+    grid-template-rows: 0.5fr auto 0.2fr; 
     gap: 0px 0px; 
     grid-template-areas: 
     "header header header"
-    "title-form title-form title-form"
-    "formulario formulario formulario"
+    "main main main"
     "footer footer footer";  
 }
 
 .title-contacto{
-    text-align:center;
-    font-size:30px;
-    margin-left: 43%;
-    padding-bottom: 6%;
-    width: 18%;
-    grid-area: title-form;
+    text-align: center;
 }
 .formulario{
     text-align: center;
-    margin: 30px 35% 20px 40%;
-    background-color: #e39754;
+    margin: 20px 0px 20px 40%;
+    background-color: #f6a966;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    grid-area: formulario;
-    width: 50%;
+    width: 20%;
     height: auto;
 }
 
@@ -468,14 +477,14 @@ section .p-autos{
     .padre{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.50fr 0.60fr 1fr 1fr 0.10fr 0.50fr; 
+    grid-template-rows: 0.5fr auto auto auto auto 0.5fr; 
     gap: 0px 0px; 
     grid-template-areas: 
                         "header header header"
-                        "video video video"
-                        "video video video"
-                        "lanzamientos lanzamientos lanzamientos"
-                        "mas-vendidos mas-vendidos mas-vendidos"
+                        "main main main"
+                        "main main main"
+                        "main main main"
+                        "main main maine"
                         "footer footer footer"; 
     }             
     
@@ -485,6 +494,11 @@ section .p-autos{
     }
     .video iframe{
         width: 100%;
+    }
+
+    .video div{
+        width: auto;
+        align-self: none;
     }
 
     .lanzamientos{
@@ -500,9 +514,35 @@ section .p-autos{
     .mas-vendidos{
         flex-direction: column;
     }
+/* -------------------------------------------------------PLAN-900----------------------------------------------------------------------*/
+    .plan{
+        flex-direction: column;
+        margin: 0%;
+        padding-left: 20%;
+    }
+
+    .plan img{
+        width: 80%;
+        height: 70%;
+    }
+
+    .pasos{
+        flex-direction: column;
+        margin: 10px 0 10px 25%;
+    }
+/* -------------------------------------------------------OFERTA-900----------------------------------------------------------------------*/
+    .oferta{
+        width: 60%;
+    }
+/* -------------------------------------------------------CONTACTO-900----------------------------------------------------------------------*/
+    .formulario{
+        width: 45%;
+        margin: 0 0 10px 30%;
+    }
 /* -------------------------------------------------------FOOTER-900----------------------------------------------------------------------*/
     .footer{
         margin: 0%;
+        flex-direction: column;
     }
 }
 /*--------------------------------------------------------MEDIA-QUERIE-MOBILE--------------------------------------------------------------*/
@@ -530,6 +570,24 @@ section .p-autos{
 
     .mas-vendidos ol li{
         font-size: 15px;
+    }
+/* -------------------------------------------------------OFERTA-550----------------------------------------------------------------------*/
+    .oferta{
+        width: 90%;
+        margin:0% 0 0 30px;
+    }
+
+    .oferta img{
+        width: 400px;
+        height: 200px;
+    }
+/* -------------------------------------------------------CONTACTO-550----------------------------------------------------------------------*/
+    .title-contacto{
+        font-size: 25px;
+    }
+
+    .formulario{
+        font-size: 18px;
     }
 /* -------------------------------------------------------FOOTER- 550----------------------------------------------------------------------*/
     .footer{
