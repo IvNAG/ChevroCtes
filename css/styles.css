@@ -13,6 +13,11 @@
     grid-area: header;
 }
 
+.header nav{
+    display: flex;
+    justify-content: space-between;
+}
+
 .header nav ul{
     display: flex;  
     list-style: none;
@@ -47,7 +52,7 @@
 }
 
 .header .submenu{
-    top: 3.4rem;
+    top: 50%;
     position: absolute;
     background: #BBBFCA;
     visibility: hidden;
@@ -61,6 +66,7 @@
     display: block;
     text-decoration: none;
     padding: 10px 10px;
+    text-align:justify;
 }
 
 .header .submenu li {
@@ -72,10 +78,9 @@
     opacity: 1;
 }
 
-.redes-container img{
-    width: 80px;
-    height: 70px;
-    margin-right: 20px;
+.redes-container{
+    width:50px; 
+    height:50px;
 }
 /*--------------------------------------------------------MAIN-INDEX--------------------------------------------------------------*/
 .padre{
@@ -155,7 +160,9 @@ main{
 .mas-vendidos{
     display: flex;
     justify-content: space-around;
-    background:#cfcfce ;
+    background: #ADA996;  
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
     margin:10px 10px 10px 10px;
     align-items: center;
     height: 80px;
@@ -429,6 +436,11 @@ section .p-autos{
 
 .formulario textarea{
     margin-top: 20px;
+}
+
+.iconoscon ul li i{
+    font-size: 25px;
+    color: #806a3b;
 }
 /*--------------------------------------------------------FOOTER------------------------------------------------------------------*/
 .footer {

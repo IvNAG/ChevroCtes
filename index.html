@@ -18,26 +18,41 @@
 <body>
     <div class="padre">
         <header class="header animate__animated animate__slideInDown">
-                <a href="index.html"><img width="200" height="100" src="images/logochevrolet.png" alt=""></a>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="pages/vehiculos.html">Vehiculos</a>
-                            <ul class="submenu">
-                                <li><a href="#">Autos</a></li>
-                                <li><a href="#">Pick Ups</a></li>
-                                <li><a href="#">Suvs</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="pages/ofertas.html">Ofertas</a> </li>
-                        <li><a href="pages/planchevrolet.html">Plan Chevrolet</a> </li>
-                        <li><a href="pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-                <div class="redes-container">
-                    <a href="#"><img src="images/facebook.png" alt="icon"></a>
-                    <a href="#"><img src="images/instagram.png" alt="icon"></a>
-                    <a href="#"><img src="images/whatsapp.png" alt="icon"></a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img width="200" height="100" src="images/logochevrolet.png" alt="">
+                </a>
+                <ul class="menu navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link vehiculos-toggle" href="pages/vehiculos.html" id="navbarVehiculos" data-toggle="vehiculos" aria-haspopup="true" aria-expanded="false">Vehiculos</a>
+                        <div class="submenu vehiculos-menu">
+                            <a class="vehiculos-item" href="#">Autos</a>
+                            <a class="vehiculos-item" href="#">Pick Ups</a>
+                            <a class="vehiculos-item" href="#">Suvs</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/planchevrolet.html">Plan Chevrolet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <div>
+                    <a class="navbar-brand" href="#">
+                        <img class="redes-container" width="50px" height="50px" src="images/facebook.png" alt="icon">
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <img class="redes-container" width="50px" height="50px" src="images/instagram.png" alt="icon">
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <img class="redes-container" width="50px" height="50px" src="images/whatsapp.png" alt="icon">
+                    </a>
                 </div>
+            </nav>
         </header>
         <main>
             <section class="video" data-aos="zoom-in">
@@ -47,32 +62,34 @@
                     <p>Además de la potencia de su motor turbo, la seguridad más avanzada, todo su confort y la exclusiva tecnología WI-FI, en el Nuevo Cruze disfrutás de la unión perfecta entre lo digital y lo analógico en un auto con lo mejor de los dos mundos. Encontrá tu camino con un auto tan único como la generación que lo inspiró.</p>
                 </div>
             </section>
-            <section class="lanzamientos">
-                <h2 class="lanzamientos-title">Próximos lanzamientos</h2>
-                <div>
-                    <div>
+            <section class="lanzamientos container">
+                <h2 class="lanzamientos-title mt-3 mb-2">Próximos lanzamientos</h2>
+                <div class="row">
+                    <div class="col">
                         <img src="images/chevroletequinox.png" alt="">
                         <p>Chevrolet Equinox</p>
                     </div>
-                    <div>
+                    <div class="col">
                         <img src="images/chevrolettrax.png" alt="">
                         <p>Chevrolet Trax</p>
                     </div>
-                    <div>
+                    <div class="col">
                         <img src="images/chevroletcaptiva.png" alt="">
                         <p>Chevrolet Captiva</p>
                     </div>
                 </div>
             </section>
-            <section class="mas-vendidos">
-                <h3>Mas Vendidos</h3>
-                <ol>
-                    <li>Cruze LTZ</li>
-                    <li>Onix</li>
-                    <li>S10 4X4</li>
-                    <li>S10 4X2</li>
-                    <li>Joy Plus</li>
-                </ol>
+            <section class="mas-vendidos container-fluid">
+                <div class="row">
+                    <h3 class="text-center pt-4 pb-1">Mas Vendidos</h3>
+                    <ol>
+                        <li>Cruze LTZ</li>
+                        <li>Onix</li>
+                        <li>S10 4X4</li>
+                        <li>S10 4X2</li>
+                        <li>Joy Plus</li>
+                    </ol>
+                </div>
             </section>
         </main>
         <footer class="footer">
