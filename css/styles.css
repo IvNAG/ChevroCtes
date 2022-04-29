@@ -183,17 +183,6 @@ main{
     margin-left: 30px;
 }
 /*--------------------------------------------------------MAIN-VEHICULOS----------------------------------------------------------*/
-.padre2{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.5fr auto 0.5fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer"; 
-}
-
 .vehiculos{
     grid-area: vehiculos ;
 }
@@ -244,17 +233,6 @@ section .p-autos{
 }
 
 /*--------------------------------------------------------MAIN-OFERTAS------------------------------------------------------------*/
-.padre4{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.3fr 0.5fr 0.3fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-                        "header header header"
-                        "main main main"
-                        "footer footer footer";
-}
-
 .oferta{
     width:40%;
     margin:10px 35% 50px 30%;
@@ -335,17 +313,6 @@ section .p-autos{
     color: rgba(0, 0, 0, 0.815);
 }
 /*--------------------------------------------------------MAIN-PLAN-CHEVROLET-----------------------------------------------------*/
-.padre3{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.5fr auto 0.5fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer"; 
-}   
-
 .title-plan{
     margin-left: 10px;
     text-align: center;
@@ -407,17 +374,6 @@ section .p-autos{
     height:126px;
 }
 /*--------------------------------------------------------MAIN-CONTACTO-----------------------------------------------------------*/
-.padre5{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.5fr auto 0.2fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";  
-}
-
 .title-contacto{
     text-align: center;
 }
@@ -492,12 +448,10 @@ section .p-autos{
     grid-template-rows: 0.5fr auto auto auto auto 0.5fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-                        "header header header"
-                        "main main main"
-                        "main main main"
-                        "main main main"
-                        "main main maine"
-                        "footer footer footer"; 
+    "header header header"
+    "main main main"
+    "main main main" 
+    "footer footer footer"; 
     }             
     
     .video{
