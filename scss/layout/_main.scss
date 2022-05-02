@@ -1,0 +1,291 @@
+/*-----------------GRID--------------*/
+.padre{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr auto 0.5fr;
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+    main{
+        grid-area: main;
+    }
+}
+
+/*----------------------------------INDEX-----------------*/
+main{
+    .video{
+        display: flex;
+        justify-content: space-evenly;
+        background: #ddddda;
+        margin: 10px 10px 0px 5px;
+        iframe{
+            height: 400px;
+            width: 50%;
+            box-shadow: 0px 0px 15px black;
+        }
+        div{width: 50%;
+            align-self: flex-start;
+            padding:20px;
+            h2{
+                text-align: center;
+                font-size: 40px;
+                color: #b6862d;
+            }
+            p{
+                font-size: 23px;
+            }
+        }
+    }
+    .lanzamientos{
+        width: 100%;
+        .lanzamientos-title{
+            text-align: center;
+        }
+        >div{
+            display: flex;
+            text-align: center;
+            background: #f8f8f5;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            img{
+                width:300px;
+                height:150px;
+                margin:10px 0;
+            }
+        }
+    }
+    .mas-vendidos{
+        display: flex;
+        justify-content: space-around;
+        background: #ADA996;  
+        background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+        background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+        margin:10px 10px 10px 10px;
+        align-items: center;
+        height: 80px;
+        h3{
+            font-size: 30px;
+        }
+        ol{
+            display: flex;
+            li{
+                font-size: 20px;
+                list-style:square inside;
+                margin-left: 30px;
+            }
+        }
+    }
+    /*----------------------------------VEHICULOS-----------------*/
+    .veh{
+        h1{
+            text-align: center;
+            font-size: 33px;
+            color: #333;
+            background: #e3dcdc;
+        }
+        img{
+            width:260px ;
+            height: 108px;
+        }
+        .vehiculos{
+            h2{
+                text-align:center;
+                font-size:28px;
+                background:#393E46;
+                color: #FFD369;
+                .autos-title{
+                    width: 100%;
+                    display: flex;
+                    padding: 10px 0px 0px;
+                    flex-wrap:wrap;
+                    justify-content: space-between;
+                    .p-autos{
+                        text-align: center;
+                        font-size: 20px;
+                    }                    
+                }
+                .suvs{
+                    margin-top: 20px;
+                    width: 100%;
+                    display: flex;
+                    padding: 10px 0px 0px;
+                    justify-content: space-around;
+                }
+                .pickups{
+                    margin-top: 30px;
+                    width: 100%;
+                    display: flex;
+                    padding: 10px 0px 0px;
+                    margin-bottom: 6px;
+                    justify-content: space-around;
+                }
+            }
+        }    
+    }
+    /*----------------------------------PLAN-CHEVROLET-----------------*/
+    .hero {
+        position: relative;
+        width: 100vw;
+        height: 60vh;
+        display: flex;
+        justify-content:center;
+        align-items:flex-start;
+        margin-top: 2px;
+        &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(/images/planes/oferta.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        filter: brightness(60%);
+        }
+        .hero-content {
+            position: relative; 
+            font-family: "Monserrat", sans-serif;
+            color: rgb(227, 225, 225);
+            text-align: end;
+            .hero-title{
+                font-size: 3rem;
+                font-weight: 600;
+                margin-bottom: 0;
+                color: #e8e7e3;
+            }
+            .hero-button {
+                background-color: #e4a124;
+                color: white;
+                border: 1px solid #c78f15;
+                padding: 0.9375rem 1.875rem;
+                font-family: "Monserrat", sans-serif;
+                font-size: 1.125rem;
+                font-weight: 200;
+                cursor: pointer;
+                &:hover {
+                    background-color: #868585;
+                    border: 1px solid #a68d0e;
+                }
+            }
+        }
+    }
+    .pasos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width:180px;
+            height:126px;
+        }
+        .title-pasos{
+            text-align: center;
+            margin-top: 1%;
+            font-family:sans-serif;
+        }
+        & >div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            width: 70%;
+            text-align: center;
+            border: 10px solid #b6862b;
+            flex-wrap: wrap;
+        }
+    }
+    /*----------------------------------OFERTAS-----------------*/
+    .of{
+        .oferta-title{
+            text-align: center;
+            background:#e3dcdc;
+        }
+        .oferta{
+            width:40%;
+            margin:10px 35% 50px 30%;
+            padding:20px 40px 50px 50px;
+            font-size:italic;
+            background-color:rgb(139, 146, 139);
+            color:rgb(0, 0, 0);
+            background: rgb(255,238,206);
+            background: linear-gradient(90deg, rgba(255,238,206,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.8) 55%, rgba(255,238,206,1) 100%);
+            h2{
+                text-align: center;
+            }
+            img{
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+                width:400px ;
+                height:200px ;
+            }
+            button{
+                margin-left: 30%;
+                margin-top: 20px;
+                padding: 1em 2em;
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                font-weight: 500;
+                color: rgb(255, 255, 255);
+                background-color: rgb(60, 58, 58);
+                border: none;
+                border-radius: 45px;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                outline: none;
+                &:hover {
+                    background-color: #CE7D35;
+                    box-shadow: 0px 15px 20px rgba(177, 132, 8, 0.4);
+                    color: #fff;
+                    transform: translateY(-7px);
+                }
+            }
+        }
+    }
+    .otros{
+        width: 100%;
+        .otros-title{
+            text-align: center;
+            background: #91908f;
+        }
+        div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            div{
+                font-family:Georgia, 'Times New Roman', Times, serif; 
+                font-size: 18px; 
+                text-decoration: none;
+                list-style: none;
+                img{
+                    margin:10px 0;
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: bolder;
+                    a{
+                        text-decoration: none;
+                        list-style: none;
+                        color: rgba(0, 0, 0, 0.815);
+                    }
+                }
+            }
+        }
+    }
+    /*----------------------------------CONTACTO-----------------*/
+    
+}
+
+
+/*----------------------------------CONTACTO-----------------*/
+
+

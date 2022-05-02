@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif; }
+
+/*------HEADER-NAV--------*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F4F4F2;
+  grid-area: header; }
+  .header nav {
+    display: flex;
+    justify-content: space-between; }
+    .header nav .menu {
+      display: flex;
+      list-style: none; }
+      .header nav .menu li {
+        margin-left: 2rem; }
+        .header nav .menu li a {
+          text-align: center;
+          line-height: 20px;
+          letter-spacing: 3px;
+          word-spacing: 1px;
+          text-decoration: none;
+          font-size: 20px;
+          color: black; }
+          .header nav .menu li a:hover {
+            color: #806a3b;
+            transition: 0.2s; }
+        .header nav .menu li .submenu {
+          top: 50%;
+          position: absolute;
+          background: #BBBFCA;
+          visibility: hidden;
+          width: auto;
+          opacity: 0.6;
+          transition: opacity 1.5s;
+          margin-top: 10px; }
+          .header nav .menu li .submenuhover {
+            visibility: visible;
+            opacity: 1; }
+          .header nav .menu li .submenu li {
+            list-style: none; }
+            .header nav .menu li .submenu li a {
+              text-decoration: none;
+              font-size: 15px;
+              color: white;
+              display: block;
+              padding: 10px 10px;
+              text-align: justify; }
+
+/*-----------------GRID--------------*/
+.padre {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr auto 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas: "header header header"
+  "main main main"
+  "footer footer footer"; }
+  .padre main {
+    grid-area: main; }
+
+/*----------------------------------INDEX-----------------*/
+main {
+  /*----------------------------------INDEX-----------------*/
+  main .video {
+    display: flex;
+    justify-content: space-evenly;
+    background: #ddddda;
+    margin: 10px 10px 0px 5px; }
+    main .video iframe {
+      height: 400px;
+      width: 50%;
+      box-shadow: 0px 0px 15px black; }
+    main .video div {
+      width: 50%;
+      align-self: flex-start;
+      padding: 20px; }
+      main .video div h2 {
+        text-align: center;
+        font-size: 40px;
+        color: #b6862d; }
+      main .video div p {
+        font-size: 23px; }
+  main .lanzamientos {
+    width: 100%; }
+    main .lanzamientos .lanzamientos-title {
+      text-align: center; }
+    main .lanzamientos > div {
+      display: flex;
+      text-align: center;
+      background: #f8f8f5;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap; }
+      main .lanzamientos > div img {
+        width: 300px;
+        height: 150px;
+        margin: 10px 0; }
+  main .mas-vendidos {
+    display: flex;
+    justify-content: space-around;
+    background: #ADA996;
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    margin: 10px 10px 10px 10px;
+    align-items: center;
+    height: 80px; }
+    main .mas-vendidos h3 {
+      font-size: 30px; }
+    main .mas-vendidos ol {
+      display: flex; }
+      main .mas-vendidos ol li {
+        font-size: 20px;
+        list-style: square inside;
+        margin-left: 30px; }
+  /*----------------------------------VEHICULOS-----------------*/
+  main .veh h1 {
+    text-align: center;
+    font-size: 33px;
+    color: #333;
+    background: #e3dcdc; }
+  main .veh img {
+    width: 260px;
+    height: 108px; }
+  main .veh .vehiculos h2 {
+    text-align: center;
+    font-size: 28px;
+    background: #393E46;
+    color: #FFD369; }
+    main .veh .vehiculos h2 .autos-title {
+      width: 100%;
+      display: flex;
+      padding: 10px 0px 0px;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      main .veh .vehiculos h2 .autos-title .p-autos {
+        text-align: center;
+        font-size: 20px; }
+    main .veh .vehiculos h2 .suvs {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      padding: 10px 0px 0px;
+      justify-content: space-around; }
+    main .veh .vehiculos h2 .pickups {
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      padding: 10px 0px 0px;
+      margin-bottom: 6px;
+      justify-content: space-around; }
+/*----------------------------------PLAN-CHEVROLET-----------------*/
+  main .hero {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2px; }
+    main .hero:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(/images/planes/oferta.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      filter: brightness(60%); }
+    main .hero .hero-content {
+      position: relative;
+      font-family: "Monserrat", sans-serif;
+      color: #e3e1e1;
+      text-align: end; }
+      main .hero .hero-content .hero-title {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 0;
+        color: #e8e7e3; }
+      main .hero .hero-content .hero-button {
+        background-color: #e4a124;
+        color: white;
+        border: 1px solid #c78f15;
+        padding: 0.9375rem 1.875rem;
+        font-family: "Monserrat", sans-serif;
+        font-size: 1.125rem;
+        font-weight: 200;
+        cursor: pointer; }
+        main .hero .hero-content .hero-button:hover {
+          background-color: #868585;
+          border: 1px solid #a68d0e; }
+  main .pasos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    main .pasos img {
+      width: 180px;
+      height: 126px; }
+    main .pasos .title-pasos {
+      text-align: center;
+      margin-top: 1%;
+      font-family: sans-serif; }
+    main .pasos > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      width: 70%;
+      text-align: center;
+      border: 10px solid #b6862b;
+      flex-wrap: wrap; }
+  /*----------------------------------OFERTAS-----------------*/
+  main .of .oferta-title {
+    text-align: center;
+    background: #e3dcdc; }
+  main .of .oferta {
+    width: 40%;
+    margin: 10px 35% 50px 30%;
+    padding: 20px 40px 50px 50px;
+    font-size: italic;
+    background-color: #8b928b;
+    color: black;
+    background: #ffeece;
+    background: linear-gradient(90deg, #ffeece 0%, white 45%, rgba(255, 255, 255, 0.8) 55%, #ffeece 100%); }
+    main .of .oferta h2 {
+      text-align: center; }
+    main .of .oferta img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      height: 200px; }
+    main .of .oferta button {
+      margin-left: 30%;
+      margin-top: 20px;
+      padding: 1em 2em;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: white;
+      background-color: #3c3a3a;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none; }
+      main .of .oferta button:hover {
+        background-color: #CE7D35;
+        box-shadow: 0px 15px 20px rgba(177, 132, 8, 0.4);
+        color: #fff;
+        transform: translateY(-7px); }
+  main .otros {
+    width: 100%; }
+    main .otros .otros-title {
+      text-align: center;
+      background: #91908f; }
+    main .otros div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+      flex-wrap: wrap; }
+      main .otros div div {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 18px;
+        text-decoration: none;
+        list-style: none; }
+        main .otros div div img {
+          margin: 10px 0; }
+        main .otros div div p {
+          font-size: 20px;
+          font-weight: bolder; }
+          main .otros div div p a {
+            text-decoration: none;
+            list-style: none;
+            color: rgba(0, 0, 0, 0.815); }
+}
+/*------------------FOOTER--------------*/
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1px;
+  background: #BBBFCA;
+  grid-area: footer; }
+  .footer img {
+    width: 300px;
+    height: 150px; }
+  .footer ul li a {
+    color: black;
+    font-size: 24px;
+    transition: all 0.2s;
+    text-decoration: none; }
+    .footer ul li ahover {
+      color: #CE7D35; }
+  .footer iframe {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    width: 300px;
+    height: 250px; }

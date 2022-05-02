@@ -40,12 +40,6 @@
     color: black;
 }
 
-.header nav .submenu li a{
-    text-decoration: none;
-    font-size: 15px;
-    color: white;
-}
-
 .header .menu li a:hover{
     color: #806a3b;
     transition: 0.2s;
@@ -54,23 +48,16 @@
 .header .submenu{
     top: 50%;
     position: absolute;
-    background: #BBBFCA;
+    background: #dcdee3;
     visibility: hidden;
     width: auto;
     opacity: 0.6;
     transition: opacity 1.5s;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
-.header .submenu li a{
-    display: block;
-    text-decoration: none;
-    padding: 10px 10px;
-    text-align:justify;
-}
-
-.header .submenu li {
-    list-style: none;
+.header nav ul li div a{
+    padding: 0px 10px 0px 10px;
 }
 
 .header .menu li:hover .submenu{
@@ -78,7 +65,7 @@
     opacity: 1;
 }
 
-.redes-container{
+.header nav div a .redes-container{
     width:50px; 
     height:50px;
 }
@@ -103,7 +90,6 @@ main{
     justify-content: space-evenly;
     background: #ddddda;
     margin: 10px 10px 0px 5px;
-    grid-area: video;
 }
 
 .video iframe{
@@ -129,7 +115,7 @@ main{
 }
 
 .lanzamientos-title{
-    text-align: center;
+    text-align: center; 
 }
 
 .lanzamientos {
@@ -143,7 +129,6 @@ main{
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    grid-area: lanzamientos;
 }
 
 .lanzamientos div img{
@@ -166,7 +151,6 @@ main{
     margin:10px 10px 10px 10px;
     align-items: center;
     height: 80px;
-    grid-area: mas-vendidos;
 }
 
 .mas-vendidos h3{
@@ -183,51 +167,52 @@ main{
     margin-left: 30px;
 }
 /*--------------------------------------------------------MAIN-VEHICULOS----------------------------------------------------------*/
-.vehiculos{
-    grid-area: vehiculos ;
-}
-
-section h1{
+.veh h1{
     text-align: center;
-    height: 50px;
-    width: 200px;
     font-size: 33px;
     color: #333;
-    margin-left: 5%;
+    background: #e3dcdc;
 }
 
-section img{
+.veh .vehiculos h2{
+    text-align:center;
+    font-size:28px;
+    background:#393E46;
+    color: #FFD369;
+}
+
+.veh img{
     width:260px ;
     height: 108px;
 }
 
-section .autos-title{
+.veh .vehiculos .autos-title{
     width: 100%;
     display: flex;
     padding: 10px 0px 0px;
-    grid-area:autos-title;
-    flex-wrap:wrap
+    flex-wrap:wrap;
+    justify-content: space-between;
 }
 
 
-section .suvs{
+.veh .vehiculos .suvs{
     margin-top: 20px;
     width: 100%;
     display: flex;
     padding: 10px 0px 0px;
-    grid-area:suvs;
+    justify-content: space-around;
 }
 
-section .pickups{
+.veh .vehiculos .pickups{
     margin-top: 30px;
     width: 100%;
     display: flex;
     padding: 10px 0px 0px;
     margin-bottom: 6px;
-    grid-area:pickups;
+    justify-content: space-around;
 }
 
-section .p-autos{
+.veh .p-autos{
     text-align: center;
     font-size: 20px;
 }
@@ -239,9 +224,14 @@ section .p-autos{
     padding:20px 40px 50px 50px;
     font-size:italic;
     background-color:rgb(139, 146, 139);
-    color:rgb(255, 255, 255);
-    background: #625e5e;
-    grid-area: oferta;
+    color:rgb(0, 0, 0);
+    background: rgb(255,238,206);
+    background: linear-gradient(90deg, rgba(255,238,206,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.8) 55%, rgba(255,238,206,1) 100%);
+}
+
+.oferta-title{
+    text-align: center;
+    background:#e3dcdc;
 }
 
 .oferta h2{
@@ -264,8 +254,8 @@ section .p-autos{
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
-    color: #000;
-    background-color: #fff;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 58, 58);
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -283,6 +273,11 @@ section .p-autos{
 
 .otros{
     width: 100%;
+}
+
+.otros-title{
+    text-align: center;
+    background: #91908f;
 }
 
 .otros div{
@@ -313,60 +308,80 @@ section .p-autos{
     color: rgba(0, 0, 0, 0.815);
 }
 /*--------------------------------------------------------MAIN-PLAN-CHEVROLET-----------------------------------------------------*/
-.title-plan{
-    margin-left: 10px;
-    text-align: center;
-    grid-area: title-plan;
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    margin-top: 2px;
 }
 
-.plan{
-    margin: 20px 10px 5px 40px;
-    grid-area: plan;
+.hero-title{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: #e8e7e3;
 }
 
-.plan a{
+.hero::before {
+    content: "";
     position: absolute;
-    left: 64%;
-    margin-top: 5px;
-    color: rgba(255, 253, 250, 0.817);
-    text-decoration: none;
-    padding: 5px 5px;
-    background-color: rgba(237, 162, 40, 0.817);
-    border-radius: 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/planes/oferta.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+.hero-content {
+    position: relative; 
+    font-family: "Monserrat", sans-serif;
+    color: rgb(227, 225, 225);
+    text-align: end;
 }
 
-.plan a:hover{
-    letter-spacing: 2px;
+.hero-button {
+    background-color: #e4a124;
+    color: white;
+    border: 1px solid #c78f15;
+    padding: 0.9375rem 1.875rem;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 200;
+    cursor: pointer;
 }
-
-.plan a:hover::before {
-    opacity: 1; 
-    transform: scale(1, 1);
-}
-
-.plan img{
-    width: 1300px;
-    height: 524px;
+.hero-button:hover {
+    background-color: #868585;
+    border: 1px solid #a68d0e;
 }
 
 .title-pasos{
     text-align: center;
     margin-top: 1%;
     font-family:sans-serif;
-    grid-area: title-pasos;
 }
 
 .pasos {
     display: flex;
-    width: 45%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pasos >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    width: 70%;
     text-align: center;
-    margin-left: 25%;
-    margin-bottom: 30px;
-    border: 10px solid #b6862d;
-    box-sizing: content-box;
-    padding-bottom: 10px;
-    padding-top: 5px;	
-    grid-area: pasos;
+    border: 10px solid #b6862b;
+    flex-wrap: wrap;
 }
 
 .pasos img{
@@ -374,7 +389,7 @@ section .p-autos{
     height:126px;
 }
 /*--------------------------------------------------------MAIN-CONTACTO-----------------------------------------------------------*/
-.title-contacto{
+/* .title-contacto{
     text-align: center;
 }
 .formulario{
@@ -397,7 +412,7 @@ section .p-autos{
 .iconoscon ul li i{
     font-size: 25px;
     color: #806a3b;
-}
+} */
 /*--------------------------------------------------------FOOTER------------------------------------------------------------------*/
 .footer {
     display: flex; 
@@ -434,10 +449,6 @@ section .p-autos{
 /*--------------------------------------------------------MEDIA-QUERIE-TABLET--------------------------------------------------------------*/
 @media screen and (max-width:900px){
 /* -------------------------------------------------------HEADER-900----------------------------------------------------------------------*/
-    .header{
-    margin: 0%;
-    flex-direction: column;
-    }
     .header nav{
         flex-direction: column;
     }
@@ -449,6 +460,7 @@ section .p-autos{
     gap: 0px 0px; 
     grid-template-areas: 
     "header header header"
+    "main main main"
     "main main main"
     "main main main" 
     "footer footer footer"; 
@@ -481,20 +493,13 @@ section .p-autos{
         flex-direction: column;
     }
 /* -------------------------------------------------------PLAN-900----------------------------------------------------------------------*/
-    .plan{
-        flex-direction: column;
-        margin: 0%;
-        padding-left: 20%;
-    }
-
-    .plan img{
-        width: 80%;
+    .hero::before{
+        width: 90%;
         height: 70%;
     }
 
     .pasos{
         flex-direction: column;
-        margin: 10px 0 10px 25%;
     }
 /* -------------------------------------------------------OFERTA-900----------------------------------------------------------------------*/
     .oferta{
@@ -507,10 +512,9 @@ section .p-autos{
     }
 /* -------------------------------------------------------FOOTER-900----------------------------------------------------------------------*/
     .footer{
-        margin: 0%;
         flex-direction: column;
     }
-}
+
 /*--------------------------------------------------------MEDIA-QUERIE-MOBILE--------------------------------------------------------------*/
 @media screen and (max-width:550px){
     /*--------------------------------------------------------HEADER-550--------------------------------------------------------------*/
