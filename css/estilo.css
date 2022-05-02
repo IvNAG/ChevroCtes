@@ -58,15 +58,16 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr auto 0.5fr;
   gap: 0px 0px;
-  grid-template-areas: "header header header"
-  "main main main"
-  "footer footer footer"; }
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
   .padre main {
     grid-area: main; }
 
 /*----------------------------------INDEX-----------------*/
 main {
-  /*----------------------------------INDEX-----------------*/
+  /*----------------------------------VEHICULOS-----------------*/
+  /*----------------------------------PLAN-CHEVROLET-----------------*/
+  /*----------------------------------OFERTAS-----------------*/
+  /*----------------------------------CONTACTO-----------------*/ }
   main .video {
     display: flex;
     justify-content: space-evenly;
@@ -118,7 +119,6 @@ main {
         font-size: 20px;
         list-style: square inside;
         margin-left: 30px; }
-  /*----------------------------------VEHICULOS-----------------*/
   main .veh h1 {
     text-align: center;
     font-size: 33px;
@@ -154,7 +154,6 @@ main {
       padding: 10px 0px 0px;
       margin-bottom: 6px;
       justify-content: space-around; }
-/*----------------------------------PLAN-CHEVROLET-----------------*/
   main .hero {
     position: relative;
     width: 100vw;
@@ -218,7 +217,6 @@ main {
       text-align: center;
       border: 10px solid #b6862b;
       flex-wrap: wrap; }
-  /*----------------------------------OFERTAS-----------------*/
   main .of .oferta-title {
     text-align: center;
     background: #e3dcdc; }
@@ -285,8 +283,8 @@ main {
             text-decoration: none;
             list-style: none;
             color: rgba(0, 0, 0, 0.815); }
-}
-/*------------------FOOTER--------------*/
+
+/*----------------------------------CONTACTO-----------------*/
 .footer {
   display: flex;
   justify-content: space-around;
