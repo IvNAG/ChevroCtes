@@ -18,29 +18,13 @@
     justify-content: space-between;
 }
 
-.header nav ul{
-    display: flex;  
-    list-style: none;
-}
-
-.header nav ul li{
-    margin-left: 2rem;
-}
-
-.header nav ul li a{
-    text-align: center;
-    line-height: 20px;
-    letter-spacing:3px;
-    word-spacing: 1px;
-}
-
 .header nav .menu li a{
     text-decoration: none;
     font-size: 20px;
     color: black;
 }
 
-.header .menu li a:hover{
+.header nav .menu li a:hover{
     color: #806a3b;
     transition: 0.2s;
 }
@@ -219,11 +203,10 @@ main{
 
 /*--------------------------------------------------------MAIN-OFERTAS------------------------------------------------------------*/
 .oferta{
-    width:40%;
-    margin:10px 35% 50px 30%;
-    padding:20px 40px 50px 50px;
-    font-size:italic;
-    background-color:rgb(139, 146, 139);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color:rgb(0, 0, 0);
     background: rgb(255,238,206);
     background: linear-gradient(90deg, rgba(255,238,206,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.8) 55%, rgba(255,238,206,1) 100%);
@@ -247,8 +230,8 @@ main{
 }
 
 .oferta button{
-    margin-left: 30%;
     margin-top: 20px;
+    margin-bottom: 5px;
     padding: 1em 2em;
     font-size: 12px;
     text-transform: uppercase;
@@ -309,43 +292,27 @@ main{
 }
 /*--------------------------------------------------------MAIN-PLAN-CHEVROLET-----------------------------------------------------*/
 .hero {
-    position: relative;
-    width: 100vw;
-    height: 60vh;
-    display: flex;
-    justify-content:center;
-    align-items:flex-start;
-    margin-top: 2px;
-}
-
-.hero-title{
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0;
-    color: #e8e7e3;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: url(/images/planes/oferta.png);
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin-top: 2px;
+    background: linear-gradient(#0570, #0510), url(/images/planes/oferta.png);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
-    filter: brightness(60%);
-}
-.hero-content {
-    position: relative; 
-    font-family: "Monserrat", sans-serif;
-    color: rgb(227, 225, 225);
-    text-align: end;
+    background-attachment: local;
 }
 
-.hero-button {
+.hero h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(186, 183, 178);
+}
+
+.hero button{
     background-color: #e4a124;
     color: white;
     border: 1px solid #c78f15;
@@ -354,9 +321,11 @@ main{
     font-size: 1.125rem;
     font-weight: 200;
     cursor: pointer;
+    border-radius: 20px;
 }
-.hero-button:hover {
-    background-color: #868585;
+
+.hero button:hover{
+    background-color: #e0bdbd;
     border: 1px solid #a68d0e;
 }
 
@@ -455,15 +424,13 @@ main{
     /* -------------------------------------------------------INDEX-900----------------------------------------------------------------------*/
     .padre{
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.5fr auto auto auto auto 0.5fr; 
+    grid-template-columns: 1fr 1fr ; 
+    grid-template-rows: 0.5fr 0.5fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-    "header header header"
-    "main main main"
-    "main main main"
-    "main main main" 
-    "footer footer footer"; 
+    "header header"
+    "main main"
+    "footer footer"; 
     }             
     
     .video{
@@ -493,9 +460,8 @@ main{
         flex-direction: column;
     }
 /* -------------------------------------------------------PLAN-900----------------------------------------------------------------------*/
-    .hero::before{
-        width: 90%;
-        height: 70%;
+    .hero{
+        width: 100%;
     }
 
     .pasos{
@@ -503,7 +469,7 @@ main{
     }
 /* -------------------------------------------------------OFERTA-900----------------------------------------------------------------------*/
     .oferta{
-        width: 60%;
+        width: 100%;
     }
 /* -------------------------------------------------------CONTACTO-900----------------------------------------------------------------------*/
     .formulario{
