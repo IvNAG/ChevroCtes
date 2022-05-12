@@ -1,0 +1,39 @@
+/*-------------MAP---------*/
+$colores: ("primary":blue, "secondary":grey,"success":green, "warning":yellow);
+
+@each $name, $color in $colores {
+  .btn-#{$name}:before {
+    background-color: $color;
+    content: $color;
+  }
+}
+/*----------MAP-GET-------------*/
+$estilos: (
+  color: #3673D9,
+  centro: center
+);
+
+div {
+  background-color: map-get($estilos, color);
+  text-align: map-get($estilos, centro);
+  padding: 1rem;
+  color: white;
+}
+/*--------------EXTEND--------------*/
+.header{
+    font-size:20px ;
+    background-color:#F4F4F2;
+}
+
+.footer{
+    @extend .header;
+    background-color:#BBBFCA ;
+}
+/*---------------MIXIN--------------*/
+@mixin formater($radio){
+    border-radius: $radio;
+}
+
+.vehiculos img{
+    @include formater(2px)
+}

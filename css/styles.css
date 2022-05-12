@@ -6,16 +6,9 @@
 }
 /*--------------------------------------------------------HEADER-NAV--------------------------------------------------------------*/
 .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    width: 100%;
     background: #F4F4F2;
     grid-area: header;
-}
-
-.header nav{
-    display: flex;
-    justify-content: space-between;
 }
 
 .header nav .menu li a{
@@ -424,8 +417,8 @@ main{
     /* -------------------------------------------------------INDEX-900----------------------------------------------------------------------*/
     .padre{
     display: grid; 
-    grid-template-columns: 1fr 1fr ; 
-    grid-template-rows: 0.5fr 0.5fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr auto 0.5fr; 
     gap: 0px 0px; 
     grid-template-areas: 
     "header header"
@@ -509,12 +502,11 @@ main{
     }
 /* -------------------------------------------------------OFERTA-550----------------------------------------------------------------------*/
     .oferta{
-        width: 90%;
-        margin:0% 0 0 30px;
+        width: 100%;
     }
 
     .oferta img{
-        width: 400px;
+        width: 100%;
         height: 200px;
     }
 /* -------------------------------------------------------CONTACTO-550----------------------------------------------------------------------*/
