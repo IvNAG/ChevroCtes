@@ -16,8 +16,6 @@ $estilos: (
 div {
   background-color: map-get($estilos, color);
   text-align: map-get($estilos, centro);
-  padding: 1rem;
-  color: white;
 }
 /*--------------EXTEND--------------*/
 .header{
