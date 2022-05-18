@@ -8,24 +8,17 @@ $colores: ("primary":blue, "secondary":grey,"success":green, "warning":yellow);
   }
 }
 /*----------MAP-GET-------------*/
-$estilos: (
-  color: #3673D9,
+$estilostituloveh: (
+  color: #FFD369,
   centro: center
 );
-
-div {
-  background-color: map-get($estilos, color);
-  text-align: map-get($estilos, centro);
-}
 /*--------------EXTEND--------------*/
-.header{
-    font-size:20px ;
-    background-color:#F4F4F2;
+.video{
+    display: flex;
 }
 
-.footer{
-    @extend .header;
-    background-color:#BBBFCA ;
+.mas-vendidos{
+    @extend .video;
 }
 /*---------------MIXIN--------------*/
 @mixin formater($radio){
@@ -33,5 +26,5 @@ div {
 }
 
 .vehiculos img{
-    @include formater(2px)
+    @include formater(1px)
 }
