@@ -14,23 +14,10 @@
     font-size: 20px;
     color: black; }
     .header nav .menu li a:hover {
-      color: #806a3b;
-      transition: 0.2s; }
-  .header nav .menu li .submenu {
-    top: 50%;
-    position: absolute;
-    background: #dcdee3;
-    visibility: hidden;
-    width: auto;
-    opacity: 0.6;
-    transition: opacity 1.5s;
-    margin-top: 20px; }
-    .header nav .menu li .submenuhover {
-      visibility: visible;
-      opacity: 1; }
-    .header nav .menu li .submenu a {
-      padding: 0px 10px 0px 10px; }
-  .header div a .redes-container {
+      background-color: #806a3b;
+      transition: 0.2s;
+      border-radius: 10px; }
+  .header nav div a .redes-container {
     width: 50px;
     height: 50px; }
 
