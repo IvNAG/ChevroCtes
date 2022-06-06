@@ -33,7 +33,7 @@
     margin-top: 20px;
 }
 
-.header nav ul li div a{
+.header nav .menu li .submenu a{
     padding: 0px 10px 0px 10px;
 }
 
@@ -125,7 +125,6 @@ main{
     background: #ADA996;  
     background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
     background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-    margin:10px 10px 10px 10px;
     align-items: center;
     height: 80px;
 }
@@ -136,6 +135,7 @@ main{
 
 .mas-vendidos ol{
     display: flex;
+    justify-content: space-around;
 }
 
 .mas-vendidos ol li{
@@ -150,6 +150,10 @@ main{
     color: #333;
     background: #e3dcdc;
 }
+.veh img{
+    width:260px ;
+    height: 108px;
+}
 
 .veh .vehiculos h2{
     text-align:center;
@@ -158,19 +162,13 @@ main{
     color: #FFD369;
 }
 
-.veh img{
-    width:260px ;
-    height: 108px;
-}
-
 .veh .vehiculos .autos-title{
     width: 100%;
     display: flex;
     padding: 10px 0px 0px;
     flex-wrap:wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
-
 
 .veh .vehiculos .suvs{
     margin-top: 20px;
@@ -178,6 +176,7 @@ main{
     display: flex;
     padding: 10px 0px 0px;
     justify-content: space-around;
+    flex-wrap:wrap;
 }
 
 .veh .vehiculos .pickups{
@@ -187,6 +186,7 @@ main{
     padding: 10px 0px 0px;
     margin-bottom: 6px;
     justify-content: space-around;
+    flex-wrap:wrap;
 }
 
 .veh .p-autos{
@@ -292,18 +292,21 @@ main{
     justify-content:center;
     align-items:center;
     margin-top: 2px;
-    background: linear-gradient(#0570, #0510), url(/images/planes/oferta.png);
+    background: linear-gradient(#0570, #0510), url(/images/planes/oferta.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: local;
+    background-attachment: fixed;
+    object-fit: cover;
 }
 
 .hero h1{
     font-size: 40px;
     font-weight: bold;
-    color: rgb(186, 183, 178);
+    color: #dedede;
+    text-shadow: 2px 2px #000;
 }
+
 
 .hero button{
     background-color: #e4a124;
@@ -315,6 +318,7 @@ main{
     font-weight: 200;
     cursor: pointer;
     border-radius: 20px;
+    transition: all 0.3s ease 0s;
 }
 
 .hero button:hover{
@@ -350,31 +354,6 @@ main{
     width:180px;
     height:126px;
 }
-/*--------------------------------------------------------MAIN-CONTACTO-----------------------------------------------------------*/
-/* .title-contacto{
-    text-align: center;
-}
-.formulario{
-    text-align: center;
-    margin: 20px 0px 20px 40%;
-    background-color: #f6a966;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 20%;
-    height: auto;
-}
-
-.formulario label{
-	margin: 0px 0px 15px 0px;
-}
-
-.formulario textarea{
-    margin-top: 20px;
-}
-
-.iconoscon ul li i{
-    font-size: 25px;
-    color: #806a3b;
-} */
 /*--------------------------------------------------------FOOTER------------------------------------------------------------------*/
 .footer {
     display: flex; 
@@ -500,6 +479,10 @@ main{
     .mas-vendidos ol li{
         font-size: 15px;
     }
+/*--------------------------------------------------------VEHICULOS-550--------------------------------------------------------------*/
+    .veh .vehiculos .autos-title{
+        justify-content: center; 
+    }
 /* -------------------------------------------------------OFERTA-550----------------------------------------------------------------------*/
     .oferta{
         width: 100%;
@@ -524,5 +507,6 @@ main{
 
     .footer ul li{
         font-size: 25px;
+    }
     }
 }

@@ -25,7 +25,8 @@ main{
             width: 50%;
             box-shadow: 0px 0px 15px black;
         }
-        div{width: 50%;
+        div{
+            width: 100%;
             align-self: flex-start;
             padding:20px;
             h2{
@@ -55,22 +56,23 @@ main{
                 height:150px;
                 margin:10px 0;
             }
+            p{
+                font-size: 20px;
+                font-weight: bolder;
+            }
         }
     }
     .mas-vendidos{
-        display: flex;
-        justify-content: space-around;
         background: #ADA996;  
         background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
         background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
-        margin:10px 10px 10px 10px;
         align-items: center;
-        height: 80px;
         h3{
             font-size: 30px;
         }
         ol{
             display: flex;
+            justify-content: space-around;
             li{
                 font-size: 20px;
                 list-style:square inside;
@@ -89,90 +91,93 @@ main{
         img{
             width:260px ;
             height: 108px;
-            @include formater(1px)
-            }
         }
         .vehiculos{
             h2{
-                text-align: map-get(estilostituloveh, centro);
+                text-align:center;
                 font-size:28px;
                 background:#393E46;
-                color: map-get(estilostituloveh color);
-                .autos-title{
-                    width: 100%;
-                    display: flex;
-                    padding: 10px 0px 0px;
-                    flex-wrap:wrap;
-                    justify-content: space-between;
+                color: #FFD369;
+            }
+            .autos-title{
+                width: 100%;
+                display: flex;
+                padding: 10px 0px 0px;
+                flex-wrap:wrap;
+                justify-content: space-between;
+                div{
                     .p-autos{
-                        text-align: map-get(estilostituloveh, centro);
+                        text-align: center;
                         font-size: 20px;
-                    }                    
-                }
-                .suvs{
-                    margin-top: 20px;
-                    width: 100%;
-                    display: flex;
-                    padding: 10px 0px 0px;
-                    justify-content: space-around;
-                }
-                .pickups{
-                    margin-top: 30px;
-                    width: 100%;
-                    display: flex;
-                    padding: 10px 0px 0px;
-                    margin-bottom: 6px;
-                    justify-content: space-around;
+                    }
+                } 
+            }
+            .suvs{
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                padding: 10px 0px 0px;
+                justify-content: space-around;
+                flex-wrap:wrap;
+                div{
+                    .p-autos{
+                        text-align: center;
+                        font-size: 20px;
+                    }
                 }
             }
-        }    
+            .pickups{
+                margin-top: 30px;
+                width: 100%;
+                display: flex;
+                padding: 10px 0px 0px;
+                margin-bottom: 6px;
+                justify-content: space-around;
+                flex-wrap:wrap;
+                div{
+                    .p-autos{
+                        text-align: center;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
     }
     /*----------------------------------PLAN-CHEVROLET-----------------*/
-    .hero {
-        position: relative;
-        width: 100vw;
-        height: 60vh;
-        display: flex;
-        justify-content:center;
-        align-items:flex-start;
-        margin-top: 2px;
-        &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
+    .hero{
         width: 100%;
-        height: 100%;
-        background: url(/images/planes/oferta.png);
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        margin-top: 2px;
+        background: linear-gradient(#0570, #0510), url(/images/planes/oferta.jpg);
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center center;
-        filter: brightness(60%);
+        background-attachment: fixed;
+        object-fit: cover;
+        h1{
+            font-size: 40px;
+            font-weight: bold;
+            color: #dedede;
+            text-shadow: 2px 2px #000;
         }
-        .hero-content {
-            position: relative; 
+        button{
+            background-color: #e4a124;
+            color: white;
+            border: 1px solid #c78f15;
+            padding: 0.9375rem 1.875rem;
             font-family: "Monserrat", sans-serif;
-            color: rgb(227, 225, 225);
-            text-align: end;
-            .hero-title{
-                font-size: 3rem;
-                font-weight: 600;
-                margin-bottom: 0;
-                color: #e8e7e3;
-            }
-            .hero-button {
-                background-color: #e4a124;
-                color: white;
-                border: 1px solid #c78f15;
-                padding: 0.9375rem 1.875rem;
-                font-family: "Monserrat", sans-serif;
-                font-size: 1.125rem;
-                font-weight: 200;
-                cursor: pointer;
-                &:hover {
-                    background-color: #868585;
-                    border: 1px solid #a68d0e;
-                }
+            font-size: 1.125rem;
+            font-weight: 200;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease 0s;
+            &:hover{
+                background-color: #e0bdbd;
+                border: 1px solid #a68d0e;          
             }
         }
     }
@@ -180,7 +185,7 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center;    
         img{
             width:180px;
             height:126px;
@@ -208,14 +213,13 @@ main{
             background:#e3dcdc;
         }
         .oferta{
-            width:40%;
-            margin:10px 35% 50px 30%;
-            padding:20px 40px 50px 50px;
-            font-size:italic;
-            background-color:rgb(139, 146, 139);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             color:rgb(0, 0, 0);
             background: rgb(255,238,206);
-            background: linear-gradient(90deg, rgba(255,238,206,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.8) 55%, rgba(255,238,206,1) 100%);
+            background: linear-gradient(90deg, rgba(255,238,206,1) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,0.8) 55%, rgba(255,238,206,1) 100%);       
             h2{
                 text-align: center;
             }
@@ -224,11 +228,11 @@ main{
                 margin-left: auto;
                 margin-right: auto;
                 width:400px ;
-                height:200px ;
+                height:200px ;      
             }
             button{
-                margin-left: 30%;
                 margin-top: 20px;
+                margin-bottom: 5px;
                 padding: 1em 2em;
                 font-size: 12px;
                 text-transform: uppercase;
@@ -241,12 +245,12 @@ main{
                 box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
                 transition: all 0.3s ease 0s;
                 cursor: pointer;
-                outline: none;
+                outline: none;          
                 &:hover {
                     background-color: #CE7D35;
                     box-shadow: 0px 15px 20px rgba(177, 132, 8, 0.4);
                     color: #fff;
-                    transform: translateY(-7px);
+                    transform: translateY(-7px);                
                 }
             }
         }
@@ -283,18 +287,7 @@ main{
             }
         }
     }
-    /*----------------------------------CONTACTO-----------------*/
-    $colores: ("primary":blue, "secondary":grey,"success":green, "warning":yellow);
-
-@each $name, $color in $colores {
-  .btn-#{$name}:before {
-    background-color: $color;
-    content: $color;
-  }
-}
 }
 
-
-/*----------------------------------CONTACTO-----------------*/
 
 
